@@ -324,7 +324,7 @@ class UHSStreamWorker(SegmentedStreamWorker):
                 attempts=0
         viewers = result.get("viewers")
         if viewers:
-            self.logger.debug("There are {0} viewers.",viewers)
+            self.logger.debug("There are {0} viewers.",int(viewers))
         if not providers or providers == "offline":
             self.logger.debug("Stream went offline")
             self.close()
